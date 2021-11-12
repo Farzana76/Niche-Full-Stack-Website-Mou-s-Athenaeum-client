@@ -1,0 +1,42 @@
+.home{
+    overflow: hidden;
+    
+}
+.heading{
+    font-family: 'Kodchasan', sans-serif;
+    color: rgb(21, 146, 155);
+    font-weight: 700;
+}
+/* .healthy-foods{
+    background-image: url(../../img/healthy.jpg);
+    background-repeat: no-repeat cover;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 20px;
+    margin-bottom: 40px;
+
+}
+.half-width{
+    width: 50%;
+    padding: 40px;
+}
+.healthy-flex-display{
+    display: flex;
+    
+}
+.healthy-section{
+    background: white;
+    opacity: .8;
+    margin: 40px;
+    margin-bottom: -20px;
+    border-radius: 20px;
+}
+.healthy-section h3{
+    font-size: 25px;
+    margin-top: -20px;
+}
+.healthy-section p{
+    font-size: 16px;
+    color: black;
+    margin-bottom: -20px;
+} */

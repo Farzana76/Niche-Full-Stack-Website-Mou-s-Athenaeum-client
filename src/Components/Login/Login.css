@@ -1,0 +1,10 @@
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    font-family: 'Kodchasan', sans-serif;
+    color: rgb(21, 146, 155);
+    font-weight: 700;
+}
