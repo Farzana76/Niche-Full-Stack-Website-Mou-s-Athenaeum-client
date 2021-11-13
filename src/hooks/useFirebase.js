@@ -13,6 +13,7 @@ const useFirebase = () => {
     const [password, setPassword] = useState("");
     const [useremail, setuserEmail] = useState("");
     const [userpassword, setuserPassword] = useState("");
+    const [admin, setAdmin] = useState(false);
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();

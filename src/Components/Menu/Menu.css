@@ -20,6 +20,7 @@
       border: 0;
       color: rgb(46, 241, 255);
       transform: scale(1.1);
+      text-decoration: none;
     }
     .item1{
       color: rgb(226, 215, 215);

@@ -1,8 +1,8 @@
 .App {
   text-align: center;
-  overflow: hidden;
-  background-image: url(../src/img/bg.jpg) ;
+  background: url(../src/img/bg.jpg) no-repeat center fixed;
   background-size: cover;
+  overflow: hidden;
 }
 .App2{
   background: rgba(244, 247, 246, 0.541);

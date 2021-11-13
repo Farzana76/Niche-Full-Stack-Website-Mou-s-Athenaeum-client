@@ -1,0 +1,17 @@
+.add-service form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.add-service form input, textarea{
+    width: 60%;
+    margin-bottom: 10px;
+    font-family: 'Kodchasan', sans-serif;
+    color: rgb(21, 146, 155);
+}
+.heading{
+    font-family: 'Kodchasan', sans-serif;
+    color: rgb(21, 146, 155);
+    font-weight: 700;
+}

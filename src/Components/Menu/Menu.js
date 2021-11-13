@@ -28,11 +28,8 @@ const Menu = () => {
                     <NavLink to="/home" className="items">
                     <li>Home</li>
                     </NavLink>
-                    <NavLink to="/events" className="items">
-                    <li>Events</li>
-                    </NavLink>
-                    <NavLink to="/deals" className="items">
-                    <li>Deals</li>
+                    <NavLink to="/explore" className="items">
+                    <li>Explore</li>
                     </NavLink>
                     {
                     user.email ?
@@ -40,7 +37,7 @@ const Menu = () => {
                             <NavLink to="/dashboard" className="items">Dashboard</NavLink>
                             {/* <div> */}
                             <span className="item1 text-muted">{user.displayName} </span>
-                                <button onClick={logOut} className="btn text-light button">Log out</button>
+                                <button onClick={logOut} className="btn text-light button btn-lg">Log out</button>
                                
                             {/* </div> */}
                         </div>
