@@ -12,7 +12,7 @@ const Pay = () => {
             </div>
             <div className="col-10">
             <h2 style={{backgroundImage: 'linear-gradient(to right, rgb(0, 0, 0), rgb(86, 142, 167), rgb(124, 182, 112))', fontFamily: '"Kodchasan", sans-serif'}} className="p-3 pb-4 text-center text-light fw-bold">{user.displayName}'s dashboard</h2>
-                <h1>Online payment is coming soon!</h1>
+                <h1 className="heading">Payment system coming soon...</h1>
             </div>
         </div>
     );

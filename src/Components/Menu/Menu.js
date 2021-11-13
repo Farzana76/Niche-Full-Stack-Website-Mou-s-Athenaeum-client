@@ -6,7 +6,7 @@ import useAuth from '../../hooks/useAuth.js';
 import './Menu.css';
 
 const Menu = () => {
-    const { user, logOut, loading } = useAuth();
+    const { user, logOut, loading, admin } = useAuth();
     const history = useHistory();
     if (loading) {
         return <Spinner animation="border" />
@@ -31,10 +31,12 @@ const Menu = () => {
                     <NavLink to="/explore" className="items">
                     <li>Explore</li>
                     </NavLink>
-                    {
-                    user.email ?
+                    {user.email ?
                         <div className="d-flex">
-                            <NavLink to="/dashboard" className="items">Dashboard</NavLink>
+                            {admin ? 
+                                <NavLink to="/addProduct" className="items">Dashboard</NavLink> :
+                                <NavLink to="/pay" className="items">Dashboard</NavLink>}
+                            
                             {/* <div> */}
                             <span className="item1 text-muted">{user.displayName} </span>
                                 <button onClick={logOut} className="btn text-light button btn-lg">Log out</button>

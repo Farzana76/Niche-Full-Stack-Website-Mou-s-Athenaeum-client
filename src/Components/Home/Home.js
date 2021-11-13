@@ -3,28 +3,29 @@ import { Card, CardGroup, Row } from 'react-bootstrap';
 import Header from '../Header/Header';
 // import Service from '../Service/Service';
 import './Home.css';
-// import img1 from '../../img/a1.png';
-// import img2 from '../../img/a2.png';
-// import img3 from '../../img/a3.png';
-// import img4 from '../../img/a4.png';
-// import img5 from '../../img/a5.png';
-// import img6 from '../../img/e1.jpg';
-// import img7 from '../../img/e2.jpg';
-// import img8 from '../../img/e3.jpg';
-// import img9 from '../../img/e4.jpg';
 import { Link } from 'react-router-dom';
+import vdo from '../../img/vd.mov';
 import Menu from '../Menu/Menu';
 import Footer from '../Footer/Footer';
 import Product from '../Product/Product';
+import SingleReview from '../Dashboard/SingleReview/SingleReview';
 
 const Home = () => {
     const [products, setProducts] = useState([]);
+    const [reviews, setReviews] = useState([]);
 
     // loading products data
     useEffect(() => {
         fetch('https://peaceful-ridge-90551.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
+    }, [])
+
+    // loading review data
+    useEffect(() => {
+        fetch('https://peaceful-ridge-90551.herokuapp.com/review')
+        .then(res => res.json())
+        .then(data => setReviews(data))
     }, [])
 
     return (
@@ -43,6 +44,21 @@ const Home = () => {
                             ></Product>)
                     }
                 </Row> 
+            </div>
+            <div className="services2">
+                <h1 className="heading mt-3">Client Reviews</h1>
+                <Row xs={1} md={1} lg={2} className="g-4 ps-5 pe-5 mb-5 pt-3">
+                    {
+                        reviews.slice(0, 6).map(review => <SingleReview
+                            key = {review._id}
+                            review={review}
+                            ></SingleReview>)
+                    }
+                </Row> 
+            </div>
+            <div className="services2 mb-5">
+                <h1 className="heading mt-3">Video of Paintings</h1>
+                <video src={vdo} autoPlay="true" className="w-75" controls/>
             </div>
                 {/* 
                 <div className="m-5 heading">

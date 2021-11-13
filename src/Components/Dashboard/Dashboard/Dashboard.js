@@ -11,7 +11,7 @@ import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Dashboard = () => {
-        const { user, logOut, loading } = useAuth();
+        const { user, logOut, loading, admin } = useAuth();
         const history = useHistory();
 
         const handleMyOrders = () => {
@@ -30,6 +30,7 @@ const Dashboard = () => {
                 </CDBSidebarHeader>
 
 
+                {!admin &&
                 <CDBSidebarContent className="sidebar-content">
                     <CDBSidebarMenu>
                         <NavLink exact to="/pay" activeClassName="activeClicked">
@@ -37,13 +38,19 @@ const Dashboard = () => {
                         </NavLink>
 
                         {/* <NavLink exact to="/myOrders/:email&&:name" activeClassName="activeClicked"> */}
-                        <CDBSidebarMenuItem icon="table" onClick={handleMyOrders}>My orders</CDBSidebarMenuItem>
+                        <CDBSidebarMenuItem icon="table" onClick={handleMyOrders} >My orders</CDBSidebarMenuItem>
                         {/* </NavLink> */}
 
                         <NavLink exact to="/review" activeClassName="activeClicked">
                         <CDBSidebarMenuItem icon="star">Review</CDBSidebarMenuItem>
                         </NavLink>
 
+                        <CDBSidebarMenuItem onClick={logOut} icon="minus-circle">Log Out</CDBSidebarMenuItem>
+                    </CDBSidebarMenu>
+                </CDBSidebarContent>}
+                {admin && 
+                <CDBSidebarContent className="sidebar-content">
+                    <CDBSidebarMenu>
                         <NavLink exact to="/addProduct" activeClassName="activeClicked">
                         <CDBSidebarMenuItem icon="plus-circle">Add product</CDBSidebarMenuItem>
                         </NavLink>
@@ -62,7 +69,7 @@ const Dashboard = () => {
 
                         <CDBSidebarMenuItem onClick={logOut} icon="minus-circle">Log Out</CDBSidebarMenuItem>
                     </CDBSidebarMenu>
-                </CDBSidebarContent>
+                </CDBSidebarContent>}
                 
 
                 {/* <CDBSidebarFooter style={{ textAlign: 'center' }}>

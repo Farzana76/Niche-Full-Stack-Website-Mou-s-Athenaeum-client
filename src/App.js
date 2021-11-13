@@ -18,6 +18,7 @@ import ManageAllOrders from './Components/Admin/ManageAllOrders/ManageAllOrders'
 import ManageProducts from './Components/Admin/ManageProducts/ManageProducts';
 import Explore from './Components/Explore/Explore';
 import Purchase from './Components/Purchase/Purchase';
+import AdminRoute from './Components/Admin/AdminRoute/AdminRoute';
 
 function App() {
   return (
@@ -53,18 +54,18 @@ function App() {
                 <PrivateRoute path="/review">
                   <Review></Review>
                 </PrivateRoute>
-                <PrivateRoute path="/addProduct">
+                <AdminRoute path="/addProduct">
                   <AddProduct></AddProduct>
-                </PrivateRoute>
-                <PrivateRoute path="/makeAdmin">
+                </AdminRoute>
+                <AdminRoute path="/makeAdmin">
                   <MakeAdmin></MakeAdmin>
-                </PrivateRoute>
-                <PrivateRoute path="/manageAllOrders">
+                </AdminRoute>
+                <AdminRoute path="/manageAllOrders">
                   <ManageAllOrders></ManageAllOrders>
-                </PrivateRoute>
-                <PrivateRoute path="/manageProducts">
+                </AdminRoute>
+                <AdminRoute path="/manageProducts">
                   <ManageProducts></ManageProducts>
-                </PrivateRoute>
+                </AdminRoute>
                 <PrivateRoute path="/product/:pid&&:title">
                   <Purchase></Purchase>
                 </PrivateRoute>

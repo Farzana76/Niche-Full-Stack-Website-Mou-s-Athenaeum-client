@@ -2,13 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../Footer/Footer';
-// import { useHistory } from 'react-router';
+import { useHistory } from 'react-router';
 import '../Login/Login.css';
 import Menu from '../Menu/Menu';
 
 const Register = () => {
     const { error, getName, getEmail, userRegistration, getPassword } = useAuth();
+    const history = useHistory();
    
+    const handleLoginSubmit = e => {
+
+        userRegistration(history);
+        e.preventDefault();
+    }
+
     return (
         <div>
             <Menu></Menu>
@@ -45,7 +52,7 @@ const Register = () => {
                     />
                     <Link to="/login">
                     <button
-                        onClick={userRegistration}
+                        onClick={handleLoginSubmit}
                         className="btn btn-primary text-light heading btn">Register
                     </button>
                     </Link>
