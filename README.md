@@ -1,4 +1,5 @@
 # Mou's Athenaeum
+This is a niche website of my paintings. Hope you'll like it!
 
 Live site: [Mou's Athenaeum](https://mous-anthenaeum.web.app/home).
 
